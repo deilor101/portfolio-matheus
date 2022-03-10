@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import type {AppProps} from 'next/app'
-import MetaContainer from '../components/MetaContainer'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { ThemeProvider } from 'next-themes'
   
 
@@ -8,9 +9,9 @@ import { ThemeProvider } from 'next-themes'
 function MyApp({Component, pageProps}: AppProps) {
   return (
           <ThemeProvider attribute="class" enableSystem={false}>
-            <MetaContainer>
+            <Navigation/>
             <Component {...pageProps} />
-            </MetaContainer>
+            <Footer/>
           </ThemeProvider>
         )
 }
